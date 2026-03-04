@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dadar Gulung!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="favicon.png">
+  <meta name="theme-color" content="#292d60">
+</head>
+<body class="body">
+  <div id="fadein"></div>
+  <nav class="nav" id="nav">
+    <a href="home.html"><img src="favicon.png" alt="Home button" width="32"></a>
+    <a href="concepts.html">Concepts</a>
+    <a href="aboutme.html">About</a>
+    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+      <div class="menu-toggle__bar1"></div>
+      <div class="menu-toggle__bar2"></div>
+    </a>
+  </nav>
+  <div class="content">
+    <h1>All about Dadar Gulung!</h1>
+    <h2>So, you wanna learn about dadar gulung, huh?</h2>
+    <p>
+      Dadar gulung (dah-dawr goo-loo-ng) is a traditional Indonesian recipe where pandan flavored crepes are filled with a sweet coconut filling.
+      It's absolutely amazing and something that I've had the privilege of enjoying growing up.
+      My mom makes dadar gulung about every couple months but always on special occasions too. 
+      I hope to spread this distinct sweetness to you as well!
+    </p>
+    <h2>Recipe</h2>
+    <h3>Crepes</h3>
+    <ul>
+      <li>1 cup all-purpose flour</li>
+      <li>1 and 3/4 cup coconut milk</li>
+      <li>1/2 cup water</li>
+      <li>1 tsp pandan flavoring</li>
+      <li>1 egg</li>
+      <li>1/2 tsp salt</li>
+      <li>Oil for cooking</li>
+    </ul>
+    <h3>Filling</h3>
+    <ul>
+      <li>2 cups shredded coconut</li>
+      <li>1 cup chopped/grated palm sugar (sub with coconut sugar or brown sugar)</li>
+      <li>1/2 cup water</li>
+      <li>1-2 drops pandan flavoring</li>
+    </ul>
+    <h3>To Cook the Filling</h3>
+    <ol>
+      <li>In a medium saucepan, add all the filling ingredients and over low to medium low heat. Keep mixing until the palm sugar has melted and the coconut browns. Transfer to a bowl when done.</li>
+    </ol>
+    <h3>To Cook the Crepes</h3>
+    <ol>
+      <li>In a large bowl, add the coconut milk, water, egg, pandan flavoring, salt, and flour. Whisk until all ingredients are incorporated together.</li>
+      <li>Add a thin layer of oil to a pan on medium-high heat (very thin; use a brush or paper towel to spread a small amount of oil around the pan).</li>
+      <li>
+        Add an amount of crepe batter that spreads across the pan in a thin layer (ladle it in and move the pan in a circular motion to move the batter around).
+        It shouldn't take very long (30 seconds to a minute) and the entire crepe should be set, not liquid at all. Move to a plate when done. Repeat for all your batter.
+      </li>
+      <li>Finally, in a laid out crepe, add a couple spoonfuls of the filling and wrap it up. That's it; enjoy!</li>
+    </ol>
+  </div>
+  <script>
+  function togglemenu() {
+    var x = document.getElementById("nav");
+    if (x.className === "nav") {
+      x.className += " nav--open";
+    } else {
+      x.className = "nav";
+    }
+    var element = document.getElementById("menu-toggle");
+    element.classList.toggle("menu-toggle--open");
+  }
+  </script>
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+  };
+  </script>
+  <footer>
+    Our website is hosted publicly, DNS resolves the domain to an IP addressm and communication occurs over HTTPS using TCP/IP.
+  </footer>
+</body>
+</html>

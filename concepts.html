@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dadar Gulung!</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="favicon.png">
+  <meta name="theme-color" content="#292d60">
+</head>
+<body class="body">
+  <div id="fadein"></div>
+  <nav class="nav" id="nav">
+    <a href="home.html"><img src="favicon.png" alt="Home button" width="32"></a>
+    <a href="concepts.html">Concepts</a>
+    <a href="aboutme.html">About</a>
+    <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+      <div class="menu-toggle__bar1"></div>
+      <div class="menu-toggle__bar2"></div>
+    </a>
+  </nav>
+  <div class="content">
+    <h1>Hello, world!</h1>
+    <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. </p>
+  </div>
+  <script>
+  function togglemenu() {
+    var x = document.getElementById("nav");
+    if (x.className === "nav") {
+      x.className += " nav--open";
+    } else {
+      x.className = "nav";
+    }
+    var element = document.getElementById("menu-toggle");
+    element.classList.toggle("menu-toggle--open");
+  }
+  </script>
+  <script type="text/javascript">
+  window.onload = function(){
+    setTimeout(function(){
+      document.getElementById("fadein").remove();
+    },1000);
+  };
+  </script>
+  <footer>
+    Our website is hosted publicly, DNS resolves the domain to an IP addressm and communication occurs over HTTPS using TCP/IP.
+  </footer>
+</body>
+</html>
