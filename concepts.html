@@ -21,8 +21,48 @@
     </a>
   </nav>
   <div class="content">
-    <h1>Hello, world!</h1>
-    <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. </p>
+    <h1>How Does This Website Work?</h1>
+    <h2>Domain Name System (DNS)</h2>
+    <p>
+      The Domain Name System, hereafter referred DNS, is how human-readable domains get translated into IP addresses to navigate the internet.
+      A URL (Uniform Resource Locater) can be broken into three parts: the protocol (HTTP / HTTPS), the domain, and the file path.
+      For example, if you looked at the address bar right now, this is how the URL would be split: 
+    </p>
+    <p><strong>Protocol:</strong> https://</p>
+    <p><strong>Domain:</strong> hello-world-42.github.io</p>
+    <p><strong>Path:</strong> /CSC4220-Project1/concepts.html</p>
+    <p>
+      DNS takes the domain portion of the URL and uses that to look for the IP address of the website to access it.
+      If you were to use commands like <code>nslookup hello-world-42</code> in Windows Powershell, you'd get a list of IP addresses that are used
+      to access this website! Remember to use the domain and <strong>not</strong> any other part of the URL, otherwise you'll
+      more likely than not get an error.
+    </p>
+    <h2>IP Addresses</h2>
+    <p>
+      If you tried the command, you'll likely see that you got several IP addresses and in two formats instead of just one.
+      That's because IP addresses come in two formats: IPv4 and IPv6. IPv4 addresses are in 32-bit format separated by periods
+      (ex. <code>185.199.109.153</code>) and IPv6 addresses are in 128-bit format separated by colons (ex. <code>2606:50c0:8003::153</code>).
+      However, you might've noticed that not only were there two formats of IP addresses returned but also more than one of each type.
+      This is because GitHub uses servers to host users' websites. GitHub has many servers so they use load balancers to distribute
+      traffic between their servers in case one of them are too busy to handle more requests. As for two types being returned, GitHub
+      returns both IPv4 and IPv6 addresses for the sake of compatability as not all systems have yet fully integrated the upgraded IPv6.
+      Browsers generally favor IPv6 but can fall back to IPv4 so having both also serves as redundancy where if either IPv4 or IPv6
+      are taking too long to connect, the browser will try the other IP address. This is how domains resolve to IP addresses and
+      resolve further to the server and the files used for the website.
+    </p>
+    <h2>Protocols</h2>
+    <p>
+      This website uses HTTPS (Hypertext Transfer Protocol Secure) and you can check for yourself by first right-clicking the page and
+      clicking <code>Inspect</code>.
+      Go to the network tab and refresh your page. You'll see a list of all the files the current webpage needs, including their
+      status codes. Click on the request labeled <code>concepts.html</code> (the html file for this page) and you'll see more about
+      this specific file. You should get one of two codes: 200 OK, which means the connection was successful and the webpage was correctly
+      loaded, and 304 NOT MODIFIED, which means because of a previous visit, the webpage is in cache so all the request does is
+      ask if the source webpage has changed and is different from the cached one; if not, you'll get 304, indicating the webpage
+      hasn't changed since the cached one. Now, it should say that the request url begins with <code>https://</code> which indicates
+      it's using HTTPS. HTTPS is important as it ensures the traffic between the user and their interactions with the webpage are secure.
+      
+    </p>
   </div>
   <script>
   function togglemenu() {
@@ -44,7 +84,7 @@
   };
   </script>
   <footer>
-    Our website is hosted publicly, DNS resolves the domain to an IP addressm and communication occurs over HTTPS using TCP/IP.
+    Our website is hosted publicly, DNS resolves the domain to an IP address and communication occurs over HTTPS using TCP/IP.
   </footer>
 </body>
 </html>
