@@ -95,3 +95,87 @@
     -webkit-animation-delay: 0.3s;
     animation-delay: 0.3s;
 }
+.contact-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    max-width: 520px;
+}
+.contact-form h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.4rem;
+    letter-spacing: 0.03em;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.contact-form label:first-of-type {
+    margin-top: 0;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.35);
+}
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+.contact-form button {
+    margin-top: 1.25rem;
+    padding: 0.7rem 1.8rem;
+    background: #ffffff;
+    color: #2b8833;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+.contact-form button:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+}
+.contact-form button:active {
+    transform: translateY(0);
+}
+#formResponse {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    min-height: 1.2rem;
+}
+#formResponse.error {
+    color: #ffe0e0;
+}
